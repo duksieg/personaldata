@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "node index.js",
+    "start": "gatsby serve --port $PORT --host 0.0.0.0",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
@@ -25,6 +25,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.4",
     "react-dom": "^17.0.1",
-    "react-shimmer-effects": "^1.0.2"
+    "react-shimmer-effects": "^1.0.2",
+    "serve": "^12.0.1"
   }
 }
