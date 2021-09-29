@@ -1,7 +1,6 @@
 import React from "react";
 import logo from '../images/backfree500.png'
 import { Modal, Button } from 'react-bootstrap'
-const isBrowser = typeof window !== "undefined"
 class Personaldetail extends React.Component {
     constructor(props) {
         super(props);

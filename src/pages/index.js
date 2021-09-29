@@ -12,6 +12,7 @@ class IndexPage extends React.Component {
     this.state = {
       user: null,
       loading: true,
+      looptime:new Date(),
     }
   }
 
@@ -30,8 +31,20 @@ class IndexPage extends React.Component {
     }
   }
 
+  updatetime(){
+    setInterval(()=>{
+      window.location.reload(false);
+        this.setState({looptime:new Date()})
+    },180000)
+        
+}
+
+
   render() {
-    if (this.state.user == null) return <ShimmerSimpleGallery card imageHeight={100} row={2} col={3} gap={30} caption />
+    if (typeof window !== 'undefined'){
+      {this.updatetime()}
+     }
+    if (this.state.user == null) return <ShimmerSimpleGallery card imageHeight={100} row={4} col={4} gap={30} caption />
     return (
       <div>
         <Mainstatus user={!this.state.user || this.state.loading ? <ShimmerSimpleGallery card imageHeight={100} row={2} col={3} gap={30} caption /> : this.state.user} ></Mainstatus>
