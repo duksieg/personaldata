@@ -54,30 +54,30 @@ class Mainstatus extends React.Component {
 
         return (
             <>
-                <div className="container-fluid">
-                    <div className="container-fluid border border-1 rounded-2 pt-2">
-                        <h3 className="text-center fs-1"> รายชื่อเป้าเตรียมเข้าค้น </h3>
-                        <div className="row row-cols-6">
-                            <PersonalLayout user={this.state.before || !this.state.loading}></PersonalLayout>
+               <div className="container-fluid d-flex mt-4">
+                    <div className="col border border-3 rounded-2 pt-2">
+                        <h3 className="text-center"> รายชื่อเป้าเตรียมเข้าค้น </h3>
+                        <div className="row row-cols-4 mt-3">
+                        <PersonalLayout user={this.state.before || !this.state.loading}></PersonalLayout>
                         </div>
                     </div>
-                    <div className="container-fluid border border-1 rounded-2 pt-2">
-                        <h3 className="text-center fs-1"> รายชื่อเป้ากำลังเข้าค้น </h3>
-                        <div className="row row-cols-6">
-                            <PersonalLayout user={this.state.current || !this.state.loading}></PersonalLayout>
+                     <div className="col border border-3 rounded-2 pt-2">
+                        <h3 className="text-center"> รายชื่อเป้ากำลังเข้าค้น </h3>
+                        <div className="row row-cols-4 mt-3">
+                        <PersonalLayout user={this.state.current || !this.state.loading }></PersonalLayout>
+                        </div>
+                    </div> 
+                    <div className="col border border-3 rounded-2 pt-2">
+                        <h3 className="text-center"> รายชื่อเป้าเข้าค้นเสร็จสิ้น </h3>
+                        <div className="row row-cols-4 mt-3">
+                        <PersonalLayout user={this.state.after || !this.state.loading } ></PersonalLayout>
                         </div>
                     </div>
-                    <div className="container-fluid border border-1 rounded-2 pt-2">
-                        <h3 className="text-center fs-1"> รายชื่อเป้าเข้าค้นเสร็จสิ้น </h3>
-                        <div className="row row-cols-6">
-                            <PersonalLayout user={this.state.after || !this.state.loading} ></PersonalLayout>
-                        </div>
-                    </div>
-                    <div className="container-fluid border border-1 rounded-2 pt-2">
-                        <h3 className="text-center fs-1"> รายชื่อเป้าไม่ทำการเช็คอิน </h3>
-                        <div className='row row-cols-6'>
-                            <PersonalLayout user={this.state.abort || !this.state.loading} ></PersonalLayout>
-                        </div>
+                </div>
+                <div className="container-fluid border border-3 rounded-2 pt-2">
+                <h3 className="text-center"> รายชื่อเป้าไม่ทำการเช็คอิน </h3>
+                    <div className='row row-cols-5 mt-3'>
+                    <PersonalLayout user={this.state.abort || !this.state.loading } ></PersonalLayout>
                     </div>
                 </div>
             </>
