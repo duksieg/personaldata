@@ -6,7 +6,7 @@ class PersonalLayout extends React.Component{
         let tempArry=[]
         let datarow = this.props.user
         datarow.forEach(userdatabyrow => {
-            let key =  userdatabyrow.latlng+userdatabyrow.fullname
+            let key =  userdatabyrow.pointno+userdatabyrow.fullname
             tempArry.push( <Personaldetail userdetail={userdatabyrow} key={key} ></Personaldetail>)
         });
         return tempArry

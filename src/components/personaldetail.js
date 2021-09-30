@@ -22,9 +22,9 @@ class Personaldetail extends React.Component {
             imageurl = `https://drive.google.com/uc?id=${this.props.userdetail.criminalimage}`
 
         }
-        if(this.props.userdetail.specialcase != null && this.props.userdetail.specialcase == 'TRUE'){
-            specialcriminal += ' bg-danger'
-        }
+        // if(this.props.userdetail.specialcase != null && this.props.userdetail.specialcase == 'TRUE'){
+        //     specialcriminal += ' bg-danger'
+        // }
         return (
             <>
                 <div className="card text-center border-0 my-2 bg-transparent">
